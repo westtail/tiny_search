@@ -1,0 +1,60 @@
+# 2026-10-31 13:02:48 ruby 3.3.6
+$ ruby step2_tokenize.rb "ruby"
+query: "ruby" -> terms: ["ruby"] -> 4 hits
+  [1] Building a search engine in Ruby
+  [7] Ruby gems for search
+  [9] Full text search in databases
+  [14] Spinel
+
+$ ruby step2_tokenize.rb "bm25"
+query: "bm25" -> terms: ["bm25"] -> 1 hits
+  [5] BM25
+
+$ ruby step2_tokenize.rb "index"
+query: "index" -> terms: ["index"] -> 3 hits
+  [2] Inverted index
+  [11] Full scan first
+  [12] Measuring performance
+
+$ ruby step2_tokenize.rb "is"
+query: "is" -> terms: ["is"] -> 13 hits
+  [1] Building a search engine in Ruby
+  [2] Inverted index
+  [3] Tokenizer
+  [4] Scoring with TF-IDF
+  [8] Searchkick
+  [9] Full text search in databases
+  [10] Library or server
+  [11] Full scan first
+  [12] Measuring performance
+  [13] Test data from Wikipedia
+  [14] Spinel
+  [15] Writing about the project
+  [16] Making a gem
+
+$ ruby step2_tokenize.rb "search engine"
+query: "search engine" -> terms: ["search", "engine"] -> 3 hits
+  [1] Building a search engine in Ruby
+  [10] Library or server
+  [14] Spinel
+
+$ ruby step2_tokenize.rb "ruby gem"
+query: "ruby gem" -> terms: ["ruby", "gem"] -> 0 hits
+
+$ ruby step2_tokenize.rb "tf-idf"
+query: "tf-idf" -> terms: ["tf", "idf"] -> 2 hits
+  [4] Scoring with TF-IDF
+  [5] BM25
+
+## step1 comparison
+$ ruby step1_full_scan.rb "search engine"
+query: "search engine" -> 4 hits
+  [1] Building a search engine in Ruby
+  [7] Ruby gems for search
+  [10] Library or server
+  [14] Spinel
+
+$ ruby step1_full_scan.rb "ruby gem"
+query: "ruby gem" -> 1 hits
+  [7] Ruby gems for search
+
