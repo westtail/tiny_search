@@ -1,0 +1,33 @@
+# 2026-10-31 17:42:04 ruby 3.3.6
+$ ruby step1_full_scan_trace.rb index
+== 1. 読み込み
+docs.class: Hash / 件数: 16
+最初の1件: ["1", {"title"=>"Building a search engine in Ruby", "body"=>"Building a small search engine in Ruby is a good way to learn how Elasticsearch works inside. You can learn tokenizing, indexing and scoring by writing the code yourself."}]
+
+== 2. クエリ: "index" -> "index"
+
+== 3. 全文書を順番にチェック
+  [ 1] true  位置:153  周辺: "kenizing, indexing and sc"
+  [ 2] true  位置:9    周辺: "inverted index an inverte"
+  [ 3] false 位置:-    周辺: "-"
+  [ 4] false 位置:-    周辺: "-"
+  [ 5] false 位置:-    周辺: "-"
+  [ 6] false 位置:-    周辺: "-"
+  [ 7] false 位置:-    周辺: "-"
+  [ 8] false 位置:-    周辺: "-"
+  [ 9] false 位置:-    周辺: "-"
+  [10] false 位置:-    周辺: "-"
+  [11] true  位置:44   周辺: " inverted index, start wi"
+  [12] true  位置:187  周辺: "ns why an index is needed"
+  [13] false 位置:-    周辺: "-"
+  [14] false 位置:-    周辺: "-"
+  [15] false 位置:-    周辺: "-"
+  [16] false 位置:-    周辺: "-"
+
+== 4. 結果
+hits.class: Hash
+query: "index" -> 4 hits
+  [1] Building a search engine in Ruby
+  [2] Inverted index
+  [11] Full scan first
+  [12] Measuring performance
