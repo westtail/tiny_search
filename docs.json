@@ -1,0 +1,18 @@
+{
+  "1": { "title": "Building a search engine in Ruby", "body": "Building a small search engine in Ruby is a good way to learn how Elasticsearch works inside. You can learn tokenizing, indexing and scoring by writing the code yourself." },
+  "2": { "title": "Inverted index", "body": "An inverted index maps each term to the list of documents that contain it. It is the core data structure of Lucene and Elasticsearch." },
+  "3": { "title": "Tokenizer", "body": "A tokenizer splits text into terms. For English text, splitting on spaces and punctuation is enough to start with." },
+  "4": { "title": "Scoring with TF-IDF", "body": "TF-IDF gives a higher score to terms that appear often in one document but rarely in the whole collection. This is the first step toward ranking." },
+  "5": { "title": "BM25", "body": "BM25 improves TF-IDF by limiting the effect of repeated terms and by adjusting for document length. Elasticsearch uses BM25 as its default similarity." },
+  "6": { "title": "Japanese text", "body": "Japanese text has no spaces between words, so a simple tokenizer does not work. A bigram tokenizer splits text into pairs of characters, and a morphological analyzer such as MeCab splits it into real words." },
+  "7": { "title": "Ruby gems for search", "body": "Ruby has many client gems for search servers, such as elasticsearch-ruby, opensearch-ruby, searchkick and chewy. There are very few search engines written in pure Ruby." },
+  "8": { "title": "Searchkick", "body": "Searchkick is a high level gem for Rails that hides many details of Elasticsearch. Reading its source code shows what the wrapper does for you." },
+  "9": { "title": "Full text search in databases", "body": "PostgreSQL has full text search through pg_search, and SQLite has FTS5. PGroonga is strong at Japanese search and is popular in the Japanese Ruby community." },
+  "10": { "title": "Library or server", "body": "A search engine can run as a library inside the application, like SQLite or Tantivy, or as a separate server over HTTP, like Elasticsearch. A library is enough when you start learning." },
+  "11": { "title": "Full scan first", "body": "Before building an inverted index, start with a full scan that reads every document for each query. It is simple, but it becomes slow when the number of documents grows." },
+  "12": { "title": "Measuring performance", "body": "Measure the search time with the Benchmark module while the number of documents grows from one thousand to one hundred thousand. Seeing the slowdown explains why an index is needed." },
+  "13": { "title": "Test data from Wikipedia", "body": "Simple English Wikipedia is good test data. The articles are short and easy to read, and there is an official API and an official dump." },
+  "14": { "title": "Spinel", "body": "Spinel is a project that compiles Ruby code into native code. A search engine is CPU bound, so it is an interesting target for a benchmark." },
+  "15": { "title": "Writing about the project", "body": "Writing down what problem each step solves and why the change works is a good habit. These notes can become a series of articles on Zenn or Qiita." },
+  "16": { "title": "Making a gem", "body": "When the code works, move it into a gem with bundle gem. A small API like add and search is easy to use and easy to explain in a talk." }
+}

@@ -1,0 +1,35 @@
+# 2026-10-31 12:45:38 ruby 3.3.6
+$ ruby step1_full_scan.rb ruby
+query: "ruby" -> 4 hits
+  [1] Building a search engine in Ruby
+  [7] Ruby gems for search
+  [9] Full text search in databases
+  [14] Spinel
+
+$ ruby step1_full_scan.rb bm25
+query: "bm25" -> 1 hits
+  [5] BM25
+
+$ ruby step1_full_scan.rb index
+query: "index" -> 4 hits
+  [1] Building a search engine in Ruby
+  [2] Inverted index
+  [11] Full scan first
+  [12] Measuring performance
+
+$ ruby step1_full_scan.rb is
+query: "is" -> 13 hits
+  [1] Building a search engine in Ruby
+  [2] Inverted index
+  [3] Tokenizer
+  [4] Scoring with TF-IDF
+  [8] Searchkick
+  [9] Full text search in databases
+  [10] Library or server
+  [11] Full scan first
+  [12] Measuring performance
+  [13] Test data from Wikipedia
+  [14] Spinel
+  [15] Writing about the project
+  [16] Making a gem
+
