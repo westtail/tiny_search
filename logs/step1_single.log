@@ -1,0 +1,17 @@
+# 2026-10-31 18:04:33 ruby 3.3.6
+$ ruby step1_single.rb index
+== 1. 入力
+文章:   "You can learn tokenizing, indexing and scoring by writing the code yourself."
+検索語: "index"
+
+== 2. 小文字にする
+文章:   "you can learn tokenizing, indexing and scoring by writing the code yourself."
+検索語: "index"
+
+== 3. 文章の中に検索語の文字列があるか (include?)
+結果: true
+
+== 4. どこで見つかったか (index)
+位置: 26文字目(0から数える)
+you can learn tokenizing, indexing and scoring by writing the code yourself.
+                          ^^^^^
